@@ -22,7 +22,7 @@ export class Entity {
   getComponent<C extends Component<any>>(
       Component: ComponentConstructor<C>,
       includeRemoved?: boolean
-  ): C;
+  ): Readonly<C>;
 
   /**
    * Get a component that is slated to be removed from this entity.
